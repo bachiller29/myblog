@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 
 @Controller('post')
 export class PostController {
@@ -17,7 +17,10 @@ export class PostController {
     }
 
 @Post()
-createone(){
+createone(
+    @Body('title') title: any,
+    @Body('content') content: any
+){
 
 }
 
